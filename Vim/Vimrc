@@ -1,0 +1,22 @@
+function L(S)
+  return tolower(a:S)
+endfunction
+function Y(S)
+  return a:S
+endfunction
+function U(S)
+  return toupper(a:S)
+endfunction
+set fencs=UTF-8,GBK,UCS-BOM,GB18030,GB2312,CP936,LATIN-1
+set encoding=UTF-8
+set langmenu=ZH_CN.UTF-8
+language messages ZH_CN.UTF-8 "处理CONSLE输出乱码
+"source $VIMRUNTIME/VIMRC_EXAMPLE.VIM
+"source $VIMRUNTIME/DELMENU.VIM
+source $VIMRUNTIME/MSWIN.VIM
+"source $VIMRUNTIME/MENU.VIM
+if has("Win32")
+  source $VIM/Vimrc.Vim
+else
+  source ~/Vim/Vimrc.Vim
+endif

@@ -1,0 +1,47 @@
+Everythin设置:
+  ICON_SHELL_EXTENSIONS	  0	禁用Everything的图标-扩展去掉SVN状态标记
+  THUMBNAIL_OVERLAY_ICON	0	关闭缩略图上的覆盖图标
+  ICONS_ONLY	            2	从跟随系统改为强制显示缩略图
+
+Java环境变量
+  一、新建系统变量JAVA_HOME=C:\Program Files\Java\JDK1.8.0_101和CLASSPATH=.;%JAVA_HOME%\LIB\DT.JAR;%JAVA_HOME%\LIB\TOOLS.JAR;
+  二、然后向Path中加入%JAVA_HOME%\BIN;%JAVA_HOME%\JRE\BIN;
+
+Python安装步骤
+  一、C:\Python27\python.exe EZ_Setup.Py  VIA https://pypi.python.org/Pypi/SetupTools 或者解压SetupTools-25.1.11.ZIP后手动安装
+  二、拷贝SiteCustomize.py 命令行: COPY SiteCustomize.py C:\Python27\LIB\SITE-PACKAGES\SiteCustomize.py(小写文件名)
+  三、将C:\Python27和C:\Python27\Scripts和C:\Python27\LIB加入环境变量然后Easy_Install.exe PIP
+  四、PIP Install JEDI FOR JEDI.VIM 
+  五、PIP Install Wand FOR IMAGEMAGICK
+  
+  PIP INSTALL PYGMENTS
+  PYTHON3.EXE -m PIP INSTALL HEREROCKS || PIP INSTALL HEREROCKS
+  PIP INSTALL PILLOW
+  PIP INSTALL WAND
+  PIP INSTALL BSDDB3-6.2.7-CP38-CP38-WIN32.WHL
+  PIP INSTALL VIM
+  NPM INSTALL -G YARN
+
+SVN文件过滤
+  WIN:
+    *.UD*.udf *.obj *.tlog *.pdb *.log *.classF *.OBJ *.TLOG *.PDB *.LOG *.CLASS *.DIR OUTPUT INFOcONFIG.XML OBJ Debug.win32
+  MacOs:
+    xcuserdata xcshareddata .DS_Store *.xcworkspace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
