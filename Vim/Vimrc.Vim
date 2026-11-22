@@ -33,6 +33,7 @@ call plug#begin(s:PlugPath)
   Plug 'JUNEGUNN/VIM-EASY-ALIGN'
   Plug 'EASYMOTION/VIM-EASYMOTION'
   Plug 'DEREKWYATT/VIM-FSWITCH'
+  Plug 'INKARKAT/VIM-INGO-LIBRARY'
   Plug 'INKARKAT/VIM-MARK'
   Plug 'ZSABERlV0/ZFVIMIM'        | Plug 'ZSABERLV0/ZFVIMJOB' | Plug 'ZSABERLV0/ZFVIMIM_PINYIN_HUGE'
   Plug 'ZSABERLV0/ZFVIMHEXEDITOR' | Plug 'ZSABERLV0/ZFVIMTXTHIGHLIGHT'
@@ -44,7 +45,7 @@ call plug#begin(s:PlugPath)
   Plug 'TBASTOS/VIM-LUA'
 call plug#end()
 filetype plugin indent on
-let s:RootMark=["@types.meta","ROOT","README.MD","LICENCE","LICENSE",L(".GITIGNORE")]
+let s:RootMark=[".GIT","@TYPES.META","ROOT","README.MD","LICENCE","LICENSE",L(".GITIGNORE")]
 """""""""""""""""""""""""""""""""""""""""""""""""""""""OTHER-PLUG""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """LEADERF-EVERYTHING"""
 let g:Lf_EverythingOpenfileFilter = ['O','H','M','MK','PY','JS','MM','CS','SH','MD','DIZ','LOG','Win','CNX','XML','VIM','INI','III','TCC','CPP','HPP','AHK','INI','INI','LUA','PHP','CSS','JAVA','JSON','PLIST','GRADLE','TXT']
@@ -164,6 +165,7 @@ let g:coc_global_extensions=[
     \ L("COC-HTML"        ),
     \ L("COC-CMAKE"       ),
     \ L("COC-PAIRS"       ),
+    \ L("COC-LUALS"       ),
     \ L("COC-CLANGD"      ),
     \ L("COC-VIMLSP"      ),
     \ L("COC-PYRIGHT"     ),
@@ -172,7 +174,6 @@ let g:coc_global_extensions=[
     \ L("COC-SOLIDITY"    ),
     \ L("COC-HIGHLIGHT"   ),
     \ L("COC-TRANSLATOR"  ),
-    \ L("COC-SUMNEKO-LUA" ),
     \ L("COC-MARKETPLACE" ),
     \ L("COC-MARKDOWNLINT")]
 
@@ -1019,10 +1020,10 @@ function! Complie()
     let l:IsOpenQf=0
     let l:RunStyle=1
     if l:RunStyle==0
-      exec "AsyncRun -mode=term -pos=bottom -focus=0 -reuse Python %"
+      exec "AsyncRun -mode=term -pos=bottom -rows=20 -focus=1 -reuse Python %"
     elseif l:RunStyle==1
       let l:IsOpenQf=1
-      exec "AsyncRun -encoding=GBK -scroll=1 Python %"
+      exec "AsyncRun -encoding=UTF8 -scroll=1 Python %"
     elseif l:RunStyle==2
       exec "!Python %"
     elseif l:RunStyle==3
